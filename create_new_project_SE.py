@@ -44,5 +44,5 @@ step3 = BashOperator(
     params={'my_param': 'Parameter I passed in'},
     dag=dag)
 
-step2.set_upstream(step1)
-step3.set_upstream(step2)
+step2.set_downstream(step1)
+step3.set_downstream(step2)
